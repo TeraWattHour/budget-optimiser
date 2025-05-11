@@ -9,7 +9,7 @@ import java.util.List;
 
 public class TestOptimizer {
     @org.junit.Test
-    public void testFullyPaid() {
+    public void testFullyPaid() throws Exception {
         List<PaymentMethod> paymentMethods = generatePaymentMethods(100);
         List<Order> orders = generateOrders(10000, paymentMethods);
 
@@ -17,7 +17,7 @@ public class TestOptimizer {
     }
 
     @org.junit.Test
-    public void testExactBudget() {
+    public void testExactBudget() throws Exception {
         List<PaymentMethod> paymentMethods = List.of(new PaymentMethod(
             "PUNKTY",
             new BigInteger("40"),

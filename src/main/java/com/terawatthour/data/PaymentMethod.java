@@ -38,6 +38,9 @@ public class PaymentMethod {
 
     public void spend(BigDecimal amount) {
         balance = balance.subtract(amount);
+        if (balance.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Insufficient balance");
+        }
     }
     public boolean hasMoneyFor(BigDecimal amount) {
         return balance.subtract(amount).compareTo(BigDecimal.ZERO) >= 0;

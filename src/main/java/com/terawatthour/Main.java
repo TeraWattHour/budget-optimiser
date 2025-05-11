@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         if (args.length < 2) {
             System.err.println("USAGE: optimizer <path to orders file> <path to payment methods file>");
             System.exit(1);
